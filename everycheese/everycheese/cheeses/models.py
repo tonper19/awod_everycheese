@@ -19,3 +19,6 @@ class Cheese(TimeStampedModel):
                                 choices=Firmness.choices,
                                 default=Firmness.UNSPECIFIED
                                 )
+
+    def __str__(self):
+        return self.name
