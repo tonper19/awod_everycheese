@@ -81,6 +81,7 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "django_countries",  # CountryField 20201214
 ]
 
 LOCAL_APPS = [
