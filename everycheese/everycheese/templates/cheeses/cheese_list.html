@@ -7,7 +7,11 @@
 
 <ul>
     {% for cheese in cheese_list %}
-    <li><a href="{% url 'cheeses:detail' cheese.slug %}">{{ cheese.name }}</a></li>
+    <li><a href="{% url 'cheeses:detail' cheese.slug %}">{{ cheese.name }}</a>
+        {% if cheese.country_of_origin.name %}
+        <img src="{{ cheese.country_of_origin.flag }}" alt="Country of origin flag">
+        {% endif %}
+    </li>
     {% endfor %}
 </ul>
 <hr />
